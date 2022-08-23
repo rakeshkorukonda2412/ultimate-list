@@ -6,14 +6,14 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 5000
-      nodePort: 30080
+      targetPort: 5050
+      nodePort: 30090
       protocol: TCP
       name: frontend
     - protocol: TCP
-      port: 30081
-      nodePort: 30081
-      targetPort: 3001
+      port: 30091
+      nodePort: 30091
+      targetPort: 3050
       name: server
   selector:
     app: uloe
